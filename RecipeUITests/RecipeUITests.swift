@@ -7,30 +7,115 @@
 //
 
 import XCTest
+@testable import Recipe
 
 class RecipeUITests: XCTestCase {
-        
-    override func setUp() {
-        super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+  
+  // Tests
+  func testElementExists() {
+    XCTAssert(app.staticTexts["Recipe List"].exists, "Element should exists.")
+  }
+  
+  func testAddAndRemoveRecipe() {
+    
+    // Adding recipe
+    let recipe = (title: "Mac and Cheese", content: "Macaroni and Cheddar Cheese")
+    
+    app.buttons["Add"].tap()
+    
+    let titleTextField = app.textFields["addRecipeTitle"]
+    titleTextField.tap()
+    titleTextField.typeText(recipe.title)
+    
+    let contentTextView = app.textViews["addRecipeContent"]
+    contentTextView.tap()
+    contentTextView.typeText(recipe.content)
+    
+    app.buttons["Done"].tap()
+    app.buttons["Add"].tap()
+    app.buttons["Recipe List"].tap()
+    
+    // Detail view of Mac and Cheese
+    app.tables.staticTexts[recipe.title].tap()
+    
+    // Removing recipe
+    app.buttons["Recipe List"].tap()
+    let recipeToRemove = app.tables.element.cells.elementBoundByIndex(0)
+    recipeToRemove.swipeLeft()
+    app.buttons["Delete"].tap()
+    
+    // Removing recipe
+    let recipe2ToRemove = app.tables.element.cells.elementBoundByIndex(0)
+    recipe2ToRemove.swipeLeft()
+    app.buttons["Delete"].tap()
+    
+  }
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
+  
+  // MARK: Lifecycle
+  override func setUp() {
+    super.setUp()
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+    continueAfterFailure = false
+
+    app.launch()
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
+//    print(app.debugDescription)
+
+  }
+  
+  override func tearDown() {
+    super.tearDown()
+    app.terminate()
+  }
+
+  // MARK: Properties
+  let app = XCUIApplication()
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
