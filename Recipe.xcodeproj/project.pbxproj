@@ -24,6 +24,8 @@
 		8B2976511C0FECCE00E8E5AE /* NSUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2976501C0FECCE00E8E5AE /* NSUserDefaultsManager.swift */; };
 		8B2976571C10BC0300E8E5AE /* iCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2976561C10BC0300E8E5AE /* iCloudManager.swift */; };
 		8B2976591C10C60A00E8E5AE /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2976581C10C60A00E8E5AE /* Reach.swift */; };
+		8B9E49621C1D05150037C46A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8B9E49611C1D05150037C46A /* README.md */; };
+		8B9E49641C1D051B0037C46A /* Simulation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8B9E49631C1D051B0037C46A /* Simulation.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		8B2976521C10B90C00E8E5AE /* Recipe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Recipe.entitlements; sourceTree = "<group>"; };
 		8B2976561C10BC0300E8E5AE /* iCloudManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCloudManager.swift; sourceTree = "<group>"; };
 		8B2976581C10C60A00E8E5AE /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		8B9E49611C1D05150037C46A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B9E49631C1D051B0037C46A /* Simulation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Simulation.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				8B0F8FDC1C0E94AF00DFB78A /* RecipeTests */,
 				8B0F8FE71C0E94AF00DFB78A /* RecipeUITests */,
 				8B0F8FC31C0E94AF00DFB78A /* Products */,
+				8B9E49611C1D05150037C46A /* README.md */,
+				8B9E49631C1D051B0037C46A /* Simulation.gif */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,6 +316,7 @@
 				8B0F8FD31C0E94AF00DFB78A /* LaunchScreen.storyboard in Resources */,
 				8B0F8FD01C0E94AF00DFB78A /* Assets.xcassets in Resources */,
 				8B0F8FCB1C0E94AF00DFB78A /* Main.storyboard in Resources */,
+				8B9E49641C1D051B0037C46A /* Simulation.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +345,7 @@
 				8B29764D1C0FA6A200E8E5AE /* RecipeManager.swift in Sources */,
 				8B2976591C10C60A00E8E5AE /* Reach.swift in Sources */,
 				8B0F8FC81C0E94AF00DFB78A /* RecipeViewController.swift in Sources */,
+				8B9E49621C1D05150037C46A /* README.md in Sources */,
 				8B29764F1C0FA85300E8E5AE /* ArrayExtension.swift in Sources */,
 				8B29764B1C0FA49E00E8E5AE /* Recipe.swift in Sources */,
 				8B2976571C10BC0300E8E5AE /* iCloudManager.swift in Sources */,
